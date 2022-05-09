@@ -2,11 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/layout'
 import ProductList from '../components/ProductList'
+import ProductFeature from '../components/ProductFeature'
 import Footer from '../components/Footer'
+import { useEffect, useRef } from 'react'
 
 const Home = ({ title, keywords, description }) => {
   return (
-    <div className="bg-gray-400">
+    <div className="bg-white">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -29,6 +31,7 @@ const Home = ({ title, keywords, description }) => {
       <Layout />
 
       <ProductList />
+      <ProductFeature />
       <Footer />
     </div>
   )
