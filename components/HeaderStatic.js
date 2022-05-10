@@ -15,7 +15,7 @@ const navigation = [
 ]
 
 function HeaderStatic() {
-  const { headerFixed, logoSize, logoSubheading, opacity } =
+  const { headerFixed, logoSize, logoSubheading, opacity, scroll, setScroll } =
     useContext(ShopContext)
 
   return (

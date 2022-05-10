@@ -15,11 +15,11 @@ const navigation = [
 ]
 
 function Header() {
-  const { headerFixed, logoSize, logoSubheading, opacity } =
+  const { headerFixed, logoSize, logoSubheading, opacity, setScroll } =
     useContext(ShopContext)
 
   return (
-    <header className="">
+    <header onLoad={() => setScroll(0)} className="">
       <div className="fixed  left-0 top-0 z-40 h-20 min-w-full bg-white"></div>
       <div className="flex min-h-screen items-end bg-white">
         <span className={headerFixed}>

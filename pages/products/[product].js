@@ -14,7 +14,6 @@ import {
 
 export default function ProductPage({ product }) {
   const features = product.features
-  console.log(features)
   const { products } = useContext(ShopContext)
   const router = useRouter()
   // const { product } = router.query
@@ -77,7 +76,6 @@ export default function ProductPage({ product }) {
 export async function getStaticPaths() {
   const paths = Products.map((item) => {
     const handle = item.href.toString()
-    console.log(`handle: ${handle}`)
     return {
       params: { product: handle },
     }
@@ -89,7 +87,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log({ params })
   return {
     props: { product: Products.find((produ) => produ.href === params.product) },
   }

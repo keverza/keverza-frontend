@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const ShopContext = createContext()
 
@@ -15,6 +16,18 @@ export const ShopProvider = ({ children }) => {
   )
   const [opacity, setOpacity] = useState('1')
 
+  //stateless component
+  const [scroll, setScroll] = useState(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY)
+    }
+    window.addEventListener('scroll', handleScroll())
+
+    console.log(`from stateles component: ${window.scrollY}`)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <ShopContext.Provider
       value={{
@@ -28,6 +41,8 @@ export const ShopProvider = ({ children }) => {
         setLogoSubheading,
         opacity,
         setOpacity,
+        scroll,
+        setScroll,
       }}
     >
       {children}
