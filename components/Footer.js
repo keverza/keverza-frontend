@@ -10,19 +10,19 @@ export default function Footer() {
           <Link href="/about">
             <a className={styles.link}>Apie</a>
           </Link>
-          <Link href="/">
+          <Link href="/delivery">
             <a className={styles.link}>Pristatymas</a>
           </Link>
-          <Link href="/">
+          <Link href="/payment">
             <a className={styles.link}>Apmokėjimas</a>
           </Link>
-          <Link href="/">
+          <Link href="/b2b">
             <a className={styles.link}>Verslui</a>
           </Link>
-          <Link href="/">
+          <Link href="/warranty">
             <a className={styles.link}>Kokybės garantija</a>
           </Link>
-          <Link href="/">
+          <Link href="/refund">
             <a className={styles.link}>Pinigų grąžinimas</a>
           </Link>
         </p>

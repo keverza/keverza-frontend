@@ -14,23 +14,25 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 
-function Header() {
+function HeaderStatic() {
   const { headerFixed, logoSize, logoSubheading, opacity } =
     useContext(ShopContext)
 
   return (
     <header className="">
-      <div className="fixed  left-0 top-0 z-40 h-20 min-w-full bg-white"></div>
-      <div className="flex min-h-screen items-end bg-white">
-        <span className={headerFixed}>
+      <div className="fixed  left-0 top-0 h-20 min-w-full bg-white"></div>
+      <div className="flex items-end bg-white">
+        <span className="fixed left-0 top-0 min-w-full md:block">
           <span className="">
-            <img className={logoSize} src="/logo.svg" alt="Keverza logo" />
-            <img
-              style={{ opacity: `${opacity}` }}
-              className={logoSubheading}
-              src="/logosub.svg"
-              alt="cocoa roasters"
-            />
+            <Link href={`/`}>
+              <a>
+                <img
+                  className="z-40 mx-auto  mb-0 mt-1 flex w-40 justify-center pb-0 md:block"
+                  src="/logo.svg"
+                  alt="Keverza logo"
+                />
+              </a>
+            </Link>
           </span>
         </span>
       </div>
@@ -38,4 +40,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderStatic
