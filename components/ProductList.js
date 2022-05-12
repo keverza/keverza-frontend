@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useContext } from 'react'
 import ShopContext from '../context/ShopContext'
 import { useRouter } from 'next/router'
 import Products from '../context/ProductsDatabase'
+import Logo from './Logo'
 
 export default function ProductList() {
   const router = useRouter()
@@ -47,13 +48,17 @@ export default function ProductList() {
 
   return (
     <div className="">
-      <div
-        className={
-          hasScrolled
-            ? 'fixed top-0 left-0 z-40 h-20  min-w-full bg-white  shadow-md'
-            : 'hidden'
-        }
-      ></div>
+      {/* Display fixed nav when scrolled */}
+      {hasScrolled ? (
+        <div className=" fixed top-0 left-0 z-40 h-20  min-w-full  bg-white shadow-md">
+          <Logo
+            width="50%"
+            subheadingDisplay={false}
+            className=" relative mx-auto  h-20 pt-1  "
+          />
+        </div>
+      ) : null}
+
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 

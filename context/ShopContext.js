@@ -33,7 +33,7 @@ export const ShopProvider = ({ children }) => {
   useEffect(() => {
     const handleScroll = throttle(() => {
       //default 0
-      const offset = 800
+      const offset = 1250
       const { scrollTop } = document.documentElement
       const scrolled = scrollTop > offset
 

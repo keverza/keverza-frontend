@@ -67,6 +67,11 @@
   "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   "version" "0.16.2"
 
+"@types/uikit@^3.3.3":
+  "integrity" "sha512-8WopIIsE1SccCHCRk3vBKpmkT9IfjaIIlLWIc45RnDd1zAY+uzJ6mrPvhQISZw3GrpmZbFJh/C4GSJzeq1y3Jw=="
+  "resolved" "https://registry.npmjs.org/@types/uikit/-/uikit-3.3.3.tgz"
+  "version" "3.3.3"
+
 "acorn-node@^1.6.1":
   "integrity" "sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A=="
   "resolved" "https://registry.npmjs.org/acorn-node/-/acorn-node-1.8.2.tgz"
@@ -587,6 +592,11 @@
   "integrity" "sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.5.4.tgz"
   "version" "4.5.4"
+
+"uikit@^3.14.1":
+  "integrity" "sha512-GVvv60GfnetVEBMNqQ8SoFP18qjtNinSL0ie/mZeJyGT/xESuUMaLpoPq9oA8CuFsih0lC4AQ5fQPRoLkAvTEQ=="
+  "resolved" "https://registry.npmjs.org/uikit/-/uikit-3.14.1.tgz"
+  "version" "3.14.1"
 
 "util-deprecate@^1.0.2":
   "integrity" "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8="
