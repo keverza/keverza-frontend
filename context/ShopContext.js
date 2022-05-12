@@ -1,11 +1,12 @@
 import { createContext, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import throttle from 'lodash.throttle'
 
 const ShopContext = createContext()
 
 export const ShopProvider = ({ children }) => {
   const [headerFixed, setHeaderFixed] = useState(
-    'fixed left-0 top-1/3 min-w-full sm:'
+    'sticky left-0 top-1/3 min-w-full'
   )
   const [logoSize, setLogoSize] = useState(
     'mb-0 flex justify-center pb-0 mx-auto max-w-md'
@@ -17,16 +18,35 @@ export const ShopProvider = ({ children }) => {
   const [opacity, setOpacity] = useState('1')
 
   //stateless component
-  const [scroll, setScroll] = useState(0)
+  const [scroll, setScroll] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY)
+      setScroll(window.scrollY > 500 ? true : false)
     }
     window.addEventListener('scroll', handleScroll())
-
-    console.log(`from stateles component: ${window.scrollY}`)
+    console.log(`from stateles component: ${scroll}`)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      //default 0
+      const offset = 800
+      const { scrollTop } = document.documentElement
+      const scrolled = scrollTop > offset
+
+      if (hasScrolled !== scrolled) {
+        setHasScrolled(scrolled)
+      }
+    }, 200)
+
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [hasScrolled])
 
   return (
     <ShopContext.Provider
@@ -43,6 +63,7 @@ export const ShopProvider = ({ children }) => {
         setOpacity,
         scroll,
         setScroll,
+        hasScrolled,
       }}
     >
       {children}

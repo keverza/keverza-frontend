@@ -17,10 +17,12 @@ export default function ProductList() {
     setOpacity,
     scroll,
     setScroll,
+    hasScrolled,
   } = useContext(ShopContext)
 
   if (currentPath === '/') {
-    if (scroll > 750) {
+    if (hasScrolled) {
+      console.log(hasScrolled)
       //top
       setHeaderFixed(' fixed hidden md:block left-0 top-0 min-w-full z-50')
       setLogoSize(
@@ -28,19 +30,13 @@ export default function ProductList() {
       )
       setLogoSubheading('hidden')
     }
-    //middle
-    if (scroll > 430 && 740 > scroll) {
-      setHeaderFixed(' flex-col min-w-full z-50 ')
-      setLogoSize('mb-0 flex justify-center pb-0 mx-auto max-w-md')
-      setLogoSubheading('hidden ')
-    }
 
     //bottom
-    if (scroll < 420) {
+    if (!hasScrolled) {
       //Grey out cocoa roasters text
-      let opacity = 1 - Math.floor((scroll * 10) / 400) * 0.1
-      console.log(opacity)
-      setOpacity(opacity)
+      // let opacity = 1 - Math.floor((scroll * 10) / 400) * 0.1
+      // console.log(opacity)
+      // setOpacity(opacity)
       setHeaderFixed('fixed left-0  top-1/3 min-w-full')
       setLogoSize('mb-0 flex justify-center pb-0 mx-auto max-w-md')
       setLogoSubheading(`pl-40 mt-2 h-11 mx-auto  `)
@@ -50,7 +46,14 @@ export default function ProductList() {
   }
 
   return (
-    <div className={scroll ? 'bg-black' : 'bg-white'}>
+    <div className="">
+      <div
+        className={
+          hasScrolled
+            ? 'fixed top-0 left-0 z-40 h-20  min-w-full bg-white  shadow-md'
+            : 'hidden'
+        }
+      ></div>
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 
