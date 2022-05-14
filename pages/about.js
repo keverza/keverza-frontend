@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import Footer from '../../components/Footer'
+import Footer from '../components/Footer'
 
 const About = () => {
   return (
