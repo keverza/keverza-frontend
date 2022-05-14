@@ -6,6 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useEffect, useRef, useState, useContext } from 'react'
 import ShopContext from '../context/ShopContext'
 import Image from 'next/image'
+import Logo from './Logo'
 
 const navigation = [
   { name: 'Product', href: '#' },
