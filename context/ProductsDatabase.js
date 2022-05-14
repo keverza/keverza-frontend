@@ -9,22 +9,26 @@ const Products = [
     story:
       'Giliai Madagascaro džiunglėse, ūkininkų kooperatyvuose auginamos ne tik kakavos pupelės, bet ir mangai, bananai, vanilė, kava. Dėl to kakava įgauna ypatingai vaisinį skonio profilį su subtiliais jazminų bei vanilės, citrinų aromato užuominom. ',
     features: [
-      { name: 'Kilmės šalis', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Kilmės šalis', description: 'Madagascar Sambirano' },
       {
         name: 'Porūšis',
-        description:
-          'Solid walnut base with rare earth magnets and powder coated steel card cover',
+        description: 'Trinitario, Criollo ir Forastero mišinys',
       },
-      { name: 'Sudėtis', description: '6.25" x 3.55" x 1.15"' },
+      {
+        name: 'Sudėtis',
+        description: 'Kakavos pupelės, kakavos sviestas, cukrus.',
+      },
       {
         name: 'Skonio natos',
-        description: 'Hand sanded and finished with natural oil',
+        description: 'Raudonieji obuoliai, vyšnios, razinos',
       },
-      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       {
-        name: 'Considerations',
-        description:
-          'Made from natural materials. Grain and color vary with each item.',
+        name: 'Apdorojimo būdas',
+        description: 'fermentuota medinėse dėžese 4-5 d.',
+      },
+      {
+        name: 'Galimi kakavos kiekio variantai',
+        description: '92%, 85%, 70%',
       },
     ],
   },
@@ -40,22 +44,26 @@ const Products = [
     story:
       'Kilombero slėnyje, greta Udzungwa kalno nacionalinio parko smulkieji ūkininkai augina nuostabią pilnos skonių paletės kakavą. Saulėje džiovinta ir atidžiai stebima. Kakava Tanzanijoe turi ilgą istoriją ir didelią kakavos auginimo patirtį nuo pat 1880 kai buvo atplukdytos pirmosios pupelės.',
     features: [
-      { name: 'Kilmės šalis', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Kilmės šalis', description: 'Tanzania Kilombero Udzungwa' },
       {
         name: 'Porūšis',
-        description:
-          'Solid walnut base with rare earth magnets and powder coated steel card cover',
+        description: 'Trinitario ir Forastero',
       },
-      { name: 'Sudėtis', description: '6.25" x 3.55" x 1.15"' },
+      {
+        name: 'Sudėtis',
+        description: 'Kakavos pupelės, kakavos sviestas, cukrus.',
+      },
       {
         name: 'Skonio natos',
-        description: 'Hand sanded and finished with natural oil',
+        description: 'Uogos, riešutai, obuoliai',
       },
-      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       {
-        name: 'Considerations',
-        description:
-          'Made from natural materials. Grain and color vary with each item.',
+        name: 'Apdorojimo būdas',
+        description: 'fermentuota medinėse dėžese 6 d., džiovinta 5-7 dienas.',
+      },
+      {
+        name: 'Galimi kakavos kiekio variantai',
+        description: '92%, 85%, 70%',
       },
     ],
   },
@@ -71,28 +79,32 @@ const Products = [
     story:
       'Žaliasis Idukki slėnis garsus aromatingais prieskoniais ir idealiomis sąlygomis auginti kakavą. Pupelės pasižymi švelnia kremine tekstūra ir turtingais prieskonių ir vaisių aromatais.',
     features: [
-      { name: 'Kilmės šalis', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Kilmės šalis', description: 'India Idukki' },
       {
         name: 'Porūšis',
-        description:
-          'Solid walnut base with rare earth magnets and powder coated steel card cover',
+        description: 'Trinitario ir Criollo',
       },
-      { name: 'Sudėtis', description: '6.25" x 3.55" x 1.15"' },
+      {
+        name: 'Sudėtis',
+        description: 'Kakavos pupelės, kakavos sviestas, cukranendrių cukrus.',
+      },
       {
         name: 'Skonio natos',
-        description: 'Hand sanded and finished with natural oil',
+        description: 'Vyšnios, vanilė, jazminai',
       },
-      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       {
-        name: 'Considerations',
-        description:
-          'Made from natural materials. Grain and color vary with each item.',
+        name: 'Apdorojimo būdas',
+        description: 'Fermentuota medinėse dėžese 5 d.',
+      },
+      {
+        name: 'Galimi kakavos kiekio variantai',
+        description: '92%, 85%, 70%',
       },
     ],
   },
   {
     id: 4,
-    name: 'Guatemala Cahabon',
+    name: 'Guatemala Cahabón',
     href: 'guatemala-cahabon',
     price: '2.2 eur',
     imageSrc:
@@ -102,22 +114,26 @@ const Products = [
     story:
       'Cahabón regiono kalvose auginamas kardamonas, cinamonas, čili pipirai ir kakava įgyjanti intensyvius prieskoninius aromatus. Cahabón kakavos pupelės yra intensyvios ir nors nėra labai kompleksiško skonio profilio jos maloniai nustebina vaisine rūgštele, riešutiniu kartumu ir viską užbaiginačiomis karamelės užuominomus.',
     features: [
-      { name: 'Kilmės šalis', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Kilmės šalis', description: 'Guatemala Cahabón' },
       {
         name: 'Porūšis',
-        description:
-          'Solid walnut base with rare earth magnets and powder coated steel card cover',
+        description: 'Trinitario, UF-667 ',
       },
-      { name: 'Sudėtis', description: '6.25" x 3.55" x 1.15"' },
+      {
+        name: 'Sudėtis',
+        description: 'Kakavos pupelės, kakavos sviestas, cukranendrių cukrus.',
+      },
       {
         name: 'Skonio natos',
-        description: 'Hand sanded and finished with natural oil',
+        description: 'Serbentai, kardamonas, karamelė',
       },
-      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       {
-        name: 'Considerations',
-        description:
-          'Made from natural materials. Grain and color vary with each item.',
+        name: 'Apdorojimo būdas',
+        description: 'Fermentuota medinėse dėžese 4-5 d.',
+      },
+      {
+        name: 'Galimi kakavos kiekio variantai',
+        description: '92%, 85%, 70%',
       },
     ],
   },
@@ -133,22 +149,62 @@ const Products = [
     story:
       'São Tomé dar vadinama šokolado sala Afrikoje, kurioje buvo pradėtata auginti ir iki šių dienų išsaugoti autentiški pupelių porūšiai. Šiame regione vyrauja amelonado, trinitario ir forastero pupelių porūšiai pupelėms. Jiems būdingas intensyvus kakavos skonis su vaisinėmis natomis pabaigoje.',
     features: [
-      { name: 'Kilmės šalis', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Kilmės šalis', description: 'São Tome' },
       {
         name: 'Porūšis',
-        description:
-          'Solid walnut base with rare earth magnets and powder coated steel card cover',
+        description: 'Amelonado, trinitario',
       },
-      { name: 'Sudėtis', description: '6.25" x 3.55" x 1.15"' },
+      {
+        name: 'Sudėtis',
+        description:
+          'kakavos pupelės (Trinitario ir Amelonado), kakavos sviestas, cukranendrių cukrus.',
+      },
       {
         name: 'Skonio natos',
-        description: 'Hand sanded and finished with natural oil',
+        description: 'Kakava, vaisiai, uogos',
       },
-      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       {
-        name: 'Considerations',
+        name: 'Apdorojimo būdas',
+        description: 'Fermentuota medinėse dėžese 6 d.',
+      },
+      {
+        name: 'Galimi kakavos kiekio variantai',
+        description: '92%, 85%, 70%, 55%',
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Baltasis Aviečių Šokoladas',
+    href: 'white-raspberry',
+    price: '2.2 eur',
+    imageSrc:
+      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+    imageAlt:
+      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    story: 'Baltasis šokoladas su vaisiais.',
+    features: [
+      { name: 'Kilmės šalis', description: '???' },
+      {
+        name: 'Porūšis',
+        description: '???',
+      },
+      {
+        name: 'Sudėtis',
         description:
-          'Made from natural materials. Grain and color vary with each item.',
+          'Kakavos sviestas, cukranendrių cukrus, pieno milteliai, liofilizuotų aviečių milteliai',
+      },
+      {
+        name: 'Skonio natos',
+        description: 'Vaisiai, uogos, pienas',
+      },
+      {
+        name: 'Apdorojimo būdas',
+        description: 'Fermentuota medinėse dėžese 6 d.',
+      },
+      {
+        name: 'Galimi cukraus kiekio variantai',
+        description: '30%, 10%',
       },
     ],
   },

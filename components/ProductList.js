@@ -47,7 +47,7 @@ export default function ProductList() {
   }
 
   return (
-    <div className="">
+    <div className="min-w-full">
       {/* Display fixed nav when scrolled */}
       {hasScrolled ? (
         <div className=" fixed top-0 left-0 z-40 h-20  min-w-full  bg-white shadow-md">

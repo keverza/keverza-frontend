@@ -26,11 +26,7 @@ function HeaderStatic() {
           <span className="">
             <Link href={`/`}>
               <a>
-                <img
-                  className="z-40 mx-auto  mb-0 mt-1 flex w-40 justify-center pb-0 md:block"
-                  src="/logo.svg"
-                  alt="Keverza logo"
-                />
+                <Logo className="z-40 mx-auto  mb-0 mt-1 flex w-40 justify-center pb-0 md:block" />
               </a>
             </Link>
           </span>
