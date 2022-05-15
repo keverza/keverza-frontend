@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 // import styles from '../styles/Header.module.css'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -7,6 +8,7 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import ShopContext from '../context/ShopContext'
 import Image from 'next/image'
 import Logo from './Logo'
+import HeadMetaInfo from '../context/HeadMetaInfo'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -20,9 +22,12 @@ function Header() {
     useContext(ShopContext)
 
   return (
-    <div className=" left-0 top-0 min-h-screen min-w-full bg-gray-100">
-      <Logo className="sticky top-80 mx-auto mb-0 flex max-w-md justify-center pb-0" />
-    </div>
+    <>
+      <HeadMetaInfo />
+      <div className=" flex min-h-screen min-w-full items-center justify-center bg-gray-100 ">
+        <Logo className="sticky top-1/3 mb-0 max-w-sm pb-0 md:max-w-md lg:max-w-xl" />
+      </div>
+    </>
   )
 }
 

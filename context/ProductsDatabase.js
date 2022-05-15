@@ -24,7 +24,7 @@ const Products = [
       },
       {
         name: 'Apdorojimo būdas',
-        description: 'fermentuota medinėse dėžese 4-5 d.',
+        description: 'Fermentuota medinėse dėžese 4-5 d.',
       },
       {
         name: 'Galimi kakavos kiekio variantai',
@@ -59,7 +59,7 @@ const Products = [
       },
       {
         name: 'Apdorojimo būdas',
-        description: 'fermentuota medinėse dėžese 6 d., džiovinta 5-7 dienas.',
+        description: 'Fermentuota medinėse dėžese 6 d., džiovinta 5-7 dienas.',
       },
       {
         name: 'Galimi kakavos kiekio variantai',

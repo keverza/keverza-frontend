@@ -5,11 +5,12 @@ import ShopContext from '../context/ShopContext'
 import { useRouter } from 'next/router'
 import Products from '../context/ProductsDatabase'
 import Logo from './Logo'
+import HeaderStatic from './HeaderStatic'
 
 export default function ProductList() {
-  const router = useRouter()
-  const currentPath = router.pathname
-  console.log(`current path: ${currentPath}`)
+  // const router = useRouter()
+  // const currentPath = router.pathname
+  // console.log(`current path: ${currentPath}`)
 
   const {
     setLogoSize,
@@ -21,48 +22,38 @@ export default function ProductList() {
     hasScrolled,
   } = useContext(ShopContext)
 
-  if (currentPath === '/') {
-    if (hasScrolled) {
-      console.log(hasScrolled)
-      //top
-      setHeaderFixed(' fixed hidden md:block left-0 top-0 min-w-full z-50')
-      setLogoSize(
-        'mb-0 flex  hidden md:block justify-center pb-0 mx-auto w-40 mt-1 '
-      )
-      setLogoSubheading('hidden')
-    }
+  // if (currentPath === '/') {
+  //   if (hasScrolled) {
+  //     console.log(hasScrolled)
+  //     //top
+  //     // setHeaderFixed(' fixed hidden md:block left-0 top-0 min-w-full z-50')
+  //     // setLogoSize(
+  //     //   'mb-0 flex  hidden md:block justify-center pb-0 mx-auto w-40 mt-1 '
+  //     // )
+  //   }
 
-    //bottom
-    if (!hasScrolled) {
-      //Grey out cocoa roasters text
-      // let opacity = 1 - Math.floor((scroll * 10) / 400) * 0.1
-      // console.log(opacity)
-      // setOpacity(opacity)
-      setHeaderFixed('fixed left-0  top-1/3 min-w-full')
-      setLogoSize('mb-0 flex justify-center pb-0 mx-auto max-w-md')
-      setLogoSubheading(`pl-40 mt-2 h-11 mx-auto  `)
-    }
-  } else {
-    return
-  }
+  //   //bottom
+  //   if (!hasScrolled) {
+  //     //Grey out cocoa roasters text
+  //     // let opacity = 1 - Math.floor((scroll * 10) / 400) * 0.1
+  //     // console.log(opacity)
+  //     // setOpacity(opacity)
+  //     // setHeaderFixed('fixed left-0  top-1/3 min-w-full')
+  //     // setLogoSize('mb-0 flex justify-center pb-0 mx-auto max-w-md')
+  //   }
+  // } else {
+  //   return
+  // }
 
   return (
-    <div className="min-w-full">
+    <div className="">
       {/* Display fixed nav when scrolled */}
-      {hasScrolled ? (
-        <div className=" fixed top-0 left-0 z-40 h-20  min-w-full  bg-white shadow-md">
-          <Logo
-            width="50%"
-            subheadingDisplay={false}
-            className=" relative mx-auto  h-20 pt-1  "
-          />
-        </div>
-      ) : null}
+      {hasScrolled ? <HeaderStatic /> : null}
 
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {Products.map((product) => (
             <Link href={`/products/${product.href}`}>
               <a key={product.id} className="group">
