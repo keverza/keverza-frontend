@@ -1,6 +1,13 @@
-const Logo = ({ width, className, subheadingDisplay, opacity, ...props }) => (
+const Logo = ({
+  fill,
+  width,
+  className,
+  subheadingDisplay,
+  opacity,
+  ...props
+}) => (
   <svg
-    fill="black"
+    fill={fill}
     width={width}
     height="auto"
     className={className}
@@ -40,7 +47,7 @@ const Logo = ({ width, className, subheadingDisplay, opacity, ...props }) => (
       />
     </g>
 
-    {subheadingDisplay ? (
+    {subheadingDisplay && (
       <g id="subheading" opacity={opacity}>
         <path
           d="M451.44,534.09q-8.29,0-13.3-4.61-5.53-5.13-5.53-15.14v-55q0-10,5.53-15.14,5-4.6,13.3-4.61t13.29,4.61q5.53,5.13,5.53,15.14v9.08h-4.87v-9.08q0-7.9-3.95-11.59-3.42-3.29-10-3.29t-10,3.29q-3.94,3.69-3.95,11.59v55q0,7.9,3.95,11.59,3.42,3.29,10,3.29t10-3.29q3.94-3.69,3.95-11.59V501h4.87v13.3q0,10-5.53,15.14Q459.73,534.1,451.44,534.09Z"
@@ -95,11 +102,12 @@ const Logo = ({ width, className, subheadingDisplay, opacity, ...props }) => (
           transform="translate(-0.01 -0.02)"
         />
       </g>
-    ) : null}
+    )}
   </svg>
 )
 
 Logo.defaultProps = {
+  fill: 'black',
   width: '90%',
   subheadingDisplay: true,
   opacity: 1,

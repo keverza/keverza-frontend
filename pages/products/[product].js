@@ -1,23 +1,12 @@
-import ShopContext from '../../context/ShopContext'
 import HeaderStatic from '../../components/HeaderStatic'
-import { useRouter } from 'next/router'
-import { useContext } from 'react'
 import Products from '../../context/ProductsDatabase'
 import Footer from '../../components/Footer'
 import Link from 'next'
-import {
-  getAllProductsIds,
-  getProductData,
-  getAllProducts,
-  getProduct,
-} from '../../lib/products'
+import RecommendedList from '../../components/RecommendedList'
 
 export default function ProductPage({ product }) {
   const features = product.features
-  const { products } = useContext(ShopContext)
-  const router = useRouter()
-  // const { product } = router.query
-  // console.log(product)
+  const { price, imageSrc, imageAlt, name, story } = product
   return (
     <>
       <HeaderStatic />
@@ -26,9 +15,9 @@ export default function ProductPage({ product }) {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              {product.name}
+              {name}
             </h2>
-            <p className="mt-4 text-gray-500">{product.story}</p>
+            <p className="mt-4 text-gray-500">{story}</p>
 
             <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
               {features.map((feature) => (
@@ -46,28 +35,29 @@ export default function ProductPage({ product }) {
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
             <img
-              src={product.imageSrc}
-              alt={product.imageAlt}
+              src={imageSrc}
+              alt={imageAlt}
               className="rounded-lg bg-gray-100"
             />
             <img
-              src={product.imageSrc}
-              alt={product.imageAlt}
+              src={imageSrc}
+              alt={imageAlt}
               className="rounded-lg bg-gray-100"
             />
             <img
-              src={product.imageSrc}
-              alt={product.imageAlt}
+              src={imageSrc}
+              alt={imageAlt}
               className="rounded-lg bg-gray-100"
             />
             <img
-              src={product.imageSrc}
-              alt={product.imageAlt}
+              src={imageSrc}
+              alt={imageAlt}
               className="rounded-lg bg-gray-100"
             />
           </div>
         </div>
       </div>
+      <RecommendedList current={product.id} products={Products} />
       <Footer />
     </>
   )

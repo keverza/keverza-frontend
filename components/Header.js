@@ -25,7 +25,10 @@ function Header() {
     <>
       <HeadMetaInfo />
       <div className=" flex min-h-screen min-w-full items-center justify-center bg-gray-100 ">
-        <Logo className="sticky top-1/3 mb-0 max-w-sm pb-0 md:max-w-md lg:max-w-xl" />
+        <Logo
+          fill="#373737"
+          className="sticky top-1/3 mb-0 max-w-sm pb-0 md:max-w-md lg:max-w-xl"
+        />
       </div>
     </>
   )

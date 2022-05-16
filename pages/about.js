@@ -7,9 +7,9 @@ const About = () => {
     <div className="flex min-h-screen flex-col items-start justify-center py-2">
       <HeaderStatic />
       <div className="h-20"></div>
-      <div className="container">
+      <div className="mx-auto">
         <section className="prose ">
-          <h3 className="">Trumpai apie Kevérzos šokolado gamyba</h3>
+          <h3 className="">Trumpai apie Kevérzos šokolado gamybą</h3>
           <p>
             <ol className="">
               <li>
